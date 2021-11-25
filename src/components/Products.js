@@ -6,6 +6,7 @@ class Products extends Component {
     const listProducts = products.map((product) => (
       <li key={product.toString()}>{product}</li>
     ));
+    
     return (
       <div>
         <ul>{listProducts}</ul>
