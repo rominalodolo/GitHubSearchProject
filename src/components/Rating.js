@@ -9,7 +9,7 @@ class Rating extends Component {
 
   render() {
     return (
-      <div>
+      <div style={styles.starStyle}>
         <h1>Rating: {this.props.rating}</h1>
         {this.state.rating >= 1 ? (
           <IoIosStar onClick={this.handleClick.bind(this, 1)} />
@@ -42,3 +42,14 @@ class Rating extends Component {
 }
 
 export default Rating;
+
+const styles = {
+  starStyle: {
+    color: "orange",
+  },
+};
+
+<Rating
+  rating={this.props.data.rating}
+  numOfReviews={this.props.data.numOfReviews}
+/>;
