@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import Rating from './components/Rating.js';
 import { Media } from 'react-bootstrap';
 

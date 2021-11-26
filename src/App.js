@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Products from "./components/Products";
+import Products from "./components/Products.js";
 import { Button } from "react-bootstrap";
-import Rating from "./components/Rating";
+import Rating from "./components/Rating.js";
 
 class App extends Component {
   render() {
