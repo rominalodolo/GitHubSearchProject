@@ -2,15 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import Products from './components/Products';
-
-
+import registerServiceWorker from './registerServiceWorker';
+//import * as firebase from 'firebase'; (npm install firebase --save)
 
 ReactDOM.render(
-    <App />
-  document.getElementById('root')
-);
-
-
-reportWebVitals();
+  <App />, document.getElementById('root'));
+registerServiceWorker();
