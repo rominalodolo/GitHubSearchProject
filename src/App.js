@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import Products from "./components/Products.js";
 import { Button } from 'react-bootstrap'; // Media, Form, FormGroup, FormControl, Button
 import Rating from "./components/Rating.js";
-// import GitHub from './components/GitHub';
+import GitHub from './components/GitHub';
+import Header from "./Header";
 
 class App extends Component {
   render() {
@@ -18,7 +19,8 @@ class App extends Component {
         <Rating rating="3" />
         <Rating rating="4" />
         <Rating rating="5" />
-        {/* <GitHub /> */}
+        <Header />
+        <GitHub />
       </div>
     );
   }
