@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Rating from './components/Rating.js';
-import { Media } from 'react-bootstrap';
+import Rating from './Rating.js';
+import { Modal } from 'react-bootstrap';
 
 class Product extends Component {
   constructor(props) {
@@ -10,15 +10,15 @@ class Product extends Component {
   render() {
     return (
       <div>
-        <Media>
+        <Modal>
           <img
             width={64}
             height={64}
             className="mr-3"
             src={this.props.data.imageUrl}
-            alt="Image"
+            alt="Portrait"
           />
-          <Media.Body>
+          <Modal.Body>
             <h5>{this.props.data.productName}</h5>
             {this.props.data.releasedDate}
             <Rating
@@ -26,8 +26,8 @@ class Product extends Component {
               numOfReviews={this.props.data.numOfReviews}
             />
             <p>{this.props.data.description}</p>
-          </Media.Body>
-        </Media>
+          </Modal.Body>
+        </Modal>
       </div>
     );
   }

@@ -1,19 +1,34 @@
 import React, { Component } from "react";
 import axios from "axios";
 import ReactLoading from "react-loading";
-import { Media } from 'react-bootstrap';
+import { Modal, Form, FormGroup, FormControl, Button } from "react-bootstrap";
 
 class GitHub extends Component {
   constructor() {
     super();
     this.state = {
       data: [],
+      searchTerm: "",
       isLoading: true,
     };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    this.setState({
+      isLoading: true,
+    });
+    this.getGitHubData(this.state.searchTerm);
+  }
+
+  handleChange(e) {
+    this.setState({ searchTerm: e.target.value });
+    }
+
   componentDidMount() {
-    this.getGitHubData("greg");
+    // this.getGitHubData("greg");
   }
 
   getGitHubData(_searchTerm) {
@@ -29,24 +44,35 @@ class GitHub extends Component {
   }
   render() {
     const listUsers = this.state.data.map((user) => (
-      <Media key={user.id}>
-        <Media.Left>
+      <Modal key={user.id}>
+        <Modal.Left>
           <a href={user.html_url}>
-            <img width={64} height={64} src={user.avatar_url} alt="Image" />
+            <img width={64} height={64} src={user.avatar_url} alt="Portrait" />
           </a>
-        </Media.Left>
-        <Media.Body>
-          <Media.Heading>{user.login}</Media.Heading>
+        </Modal.Left>
+        <Modal.Body>
+          <Modal.Heading>{user.login}</Modal.Heading>
           <p>Score: {user.score}</p>
-        </Media.Body>
-      </Media>
+        </Modal.Body>
+      </Modal>
     ));
     return (
       <div>
+        <Form inline onSubmit={this.handleSubmit}>
+        <FormGroup controlId="formInlineName">
+        <FormControl
+          type="text"
+          value={this.state.searchTerm}
+          placeholder="Enter Search Term"
+          onChange={this.handleChange}
+        />
+        </FormGroup>{' '}
+          <Button type="submit">Search</Button>
+        </Form>
         <h3>GitHub Users Results</h3>
-        {this.state.isLoading && 
+        {this.state.isLoading && (
           <ReactLoading type="spinningBubbles" color="#444" />
-        }
+        )}
         {listUsers}
       </div>
     );

@@ -1,10 +1,11 @@
 // import Rating from "./components/Rating";
 // import { Media } from "react-bootstrap";
 import React, { Component } from 'react';
-// import Product from './components/Product';
+import Product from './Product';
 
 
 class Products extends Component {
+
   products;
 
   constructor(props) {
@@ -42,14 +43,17 @@ class Products extends Component {
   }
 
   render() {
-    const products = ["Learning React", "Pro React", "Beginning React"];
-    const listProducts = products.map((product) => (
-      <li key={product.toString()}>{product}</li>
+    const listProducts = this.products.map((product) => (
+      <Product key={product.productName} data={product}/>
     ));
 
     return (
       <div>
-        <ul>{listProducts}</ul>
+      {listProducts.length > 0 ? (
+          <ul>{listProducts}</ul>
+      ) : (
+        <ul>No Products to Display</ul>
+      )}
       </div>
     );
   }

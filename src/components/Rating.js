@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { IoIosStar, IoIosStarOutline } from "react-icons/io";
 
 class Rating extends Component {
-  
+
   constructor(props) {
     super(props);
     this.state = { rating: this.props.rating };
@@ -53,8 +53,3 @@ const styles = {
     color: "orange",
   },
 };
-
-<Rating
-  rating={this.props.data.rating}
-  numOfReviews={this.props.data.numOfReviews}
-/>;
