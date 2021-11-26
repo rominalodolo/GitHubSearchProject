@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios"; // npm install axios
+import axios from "axios"; 
 
 
 class GitHub extends Component {
@@ -9,8 +9,7 @@ class GitHub extends Component {
   }
 
   getGitHubData(_searchTerm) {
-    axios
-      .get("https://api.github.com/search/users?q=" + _searchTerm)
+    axios.get("https://api.github.com/search/users?q=" + _searchTerm)
       .then((res) => {
         console.log(res.data.items);
       });
@@ -19,6 +18,5 @@ class GitHub extends Component {
     return <div></div>;
   }
 }
-
 
 export default GitHub;
