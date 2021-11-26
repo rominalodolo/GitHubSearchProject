@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import ReactLoading from "react-loading";
+import { Media } from 'react-bootstrap';
 
 class GitHub extends Component {
   constructor() {
