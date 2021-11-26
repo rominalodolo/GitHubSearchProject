@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Rating from './components/Rating';
+import Rating from './components/Rating.js';
 import { Media } from 'react-bootstrap';
 
 class Product extends Component {
