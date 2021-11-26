@@ -4,6 +4,7 @@ import { Button } from 'react-bootstrap'; // Media, Form, FormGroup, FormControl
 import Rating from "./components/Rating.js";
 import GitHub from './components/GitHub';
 import Header from "./components/Header";
+import GitHubUser from './GitHubUser';
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
         <Rating rating="4" />
         <Rating rating="5" />
         <GitHub />
+        <GitHubUser />
       </div>
     );
   }
