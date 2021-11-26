@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import { Nav, Navbar, NavItem } from "react-bootstrap";
 import Home from "./Home";
 import NotFound from "./NotFound";
+import GitHubUser from "./GitHubUser";
 
 class Header extends Component {
   render() {
@@ -27,6 +28,7 @@ class Header extends Component {
               </Nav>
             </Navbar>
             <Routes>
+              <Route path="/github/user/:login/:score" component={GitHubUser} />
               <Route path="/github" component={GitHub} />
               <Route exact path="/" component={Home} />
               <Route path="/*" component={NotFound} />
