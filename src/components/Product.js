@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import Rating from './Rating.js';
 import { Modal } from 'react-bootstrap';
 
+
 class Product extends Component {
-  constructor(props) {
+
+  constructor(props){
     super(props);
   }
 
