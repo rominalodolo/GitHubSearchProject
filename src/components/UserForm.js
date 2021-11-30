@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { FormGroup, ControlLabel, FormControl, HelpBlock, Button, Alert } from 'react-bootstrap';
+import * as firebase from 'firebase';
+
 
 class UserForm extends Component {
+  // title;
+  // id;
 
   errorUsername;
   errorPassword;
