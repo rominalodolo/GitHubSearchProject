@@ -45,10 +45,10 @@ class GitHub extends Component {
             alt="Generic placeholder"
           />
         </Nav.Link>
-        <Media.Body>
+        <media-body>
           <h5>Login: {user.login}</h5>
           <p>Id: {user.id}</p>
-        </Media.Body>
+        </media-body>
       </Media>
     ));
 

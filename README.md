@@ -4,7 +4,7 @@ This website is based on exercise react-router-dom from the Beginning React book
 
 ## Netlify Link 
 
-A link to the working website application, depolyed Netlify: 
+A link to the working website application, deployed Netlify: 
 [?](?)
 
 ### `npm start`
