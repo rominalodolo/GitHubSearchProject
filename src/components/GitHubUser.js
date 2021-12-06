@@ -15,7 +15,7 @@ class GitHubUser extends Component {
     return (
       <div>
         <h1>User Login: {this.props.match.params.login}</h1>
-        <h2>User Score: {this.props.match.params.score}</h2>`
+        <h2>User Id: {this.props.match.params.id}</h2>`
         <Button variant="primary" onClick={this.handleClick}>
           Go to GitHub Users
         </Button>
