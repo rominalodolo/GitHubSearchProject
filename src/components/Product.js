@@ -1,8 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import React, { Component } from "react";
-import Rating from "./Rating";
-import { Media } from "react-bootstrap";
 
 class Product extends Component {
   constructor(props) {

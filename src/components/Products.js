@@ -1,5 +1,3 @@
-// import Rating from "./components/Rating";
-// import { Media } from "react-bootstrap";
 import React, { Component } from 'react';
 import Product from './Product';
 
