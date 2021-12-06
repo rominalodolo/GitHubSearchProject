@@ -6,7 +6,7 @@ const Users = () => {
 
     return(
       <ul>
-        {users.map(el =>(//
+        {users.map(el =>(
           <li key={el.id}>{el.name}></li>
         ))}
       </ul>        

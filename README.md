@@ -8,9 +8,13 @@ A link to the working website application, deployed Netlify:
 [?](?)
 
 ### Installations
+
 react-router-dom
 `$ npm install --save react-router-dom`
-``
+
+React Media Object
+`npm install react-media-object --save`
+
 
 ### Screen Shot of GitHub Search Application
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import ReactLoading from "react-loading";
-import { Media, Form, Button, Nav } from "react-bootstrap";
+import { media, Form, Button, Nav } from "react-bootstrap";
 
 class GitHub extends Component {
   constructor() {
@@ -35,7 +35,7 @@ class GitHub extends Component {
 
   render() {
     const listUsers = this.state.data.map((user) => (
-      <Media key={user.id}>
+      <media key={user.id}>
         <Nav.Link href={`/github/user/${user.login}/${user.id}`}>
           <img
             width={64}
@@ -49,7 +49,7 @@ class GitHub extends Component {
           <h5>Login: {user.login}</h5>
           <p>Id: {user.id}</p>
         </media-body>
-      </Media>
+      </media>
     ));
 
     return (
